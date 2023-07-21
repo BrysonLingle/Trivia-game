@@ -1,2 +1,5 @@
 # Trivia-game
-A game of Knowledge
+## Technolgy Used
+HTML
+Javascript
+CSS
