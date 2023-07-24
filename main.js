@@ -1,3 +1,17 @@
+// }]
+// const results = document.getElementById('resultS')
+// const pressButton = document.getElementById('check', answerS)
+// pressButton.addEventListener('click' , answerS)
+// function answerS() {
+//    let number = 0
+//    for (let i=0; i < carQuestions.length; i++){
+//       const question = carQuestions[i]
+//       const resultS = resultS.querySelector
+//       }
+//       if (a === q.correctA){
+//          number++
+//       }
+//    } 
 // // button.addEventListener('click', function() {
 
 // // })
@@ -28,22 +42,28 @@
 
 // // }
 
-const carQuestions = [{
-   q: 'What was the first car brand?',
-   a: {
-      answer1: 'Peugeot',
-      answer2: 'General Motors',
-      answer3: 'Ford',
-      answer4: 'Tesla'
-   }
-}]
-const pressButton = document.getElementById('check')
-pressButton.addEventListener('click' , answerS)
-function answerS() {
-   let number = 0
-   for (let i=0; i < carQuestions.length; i++){
-      
+const carQuestions = {
+   question: 'What was the first car brand?',
+   answer: 'Peugeot',  
+   options: ['Peugeot', "General Motors", 'Ford', 'Tesla']
+}
+const questions1 = document.querySelector('#questionfield')
+const answerButtons = document.querySelectorAll('button-wrapper')
+
+answerButtons.forEach(function(btn){
+   btn.addEventListener('click', checkAnswer)
+})
+function renderQuestion(){
+   questions1.innerText = carQuestions.question
+   for (let i = 0; i < answerButtons.length; i++){
+      let buttonsNow = answerButtons[i]
+      buttonsNow.querySelector('span').innerText=carQuestions
    }
 
 }
+   renderQuestion()
+   function chechAnswer(c){
+      console.log(c.target)
+   }
 
+console.log(answer)
