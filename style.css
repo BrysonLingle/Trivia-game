@@ -1,7 +1,7 @@
- /* body {
+ body {
     text-align: center;
     color: rgb(21, 255, 0);
-    background-image: url('https://images.pexels.com/photos/8141163/pexels-photo-8141163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    /* background-image: url('https://images.pexels.com/photos/8141163/pexels-photo-8141163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
     background-repeat: no-repeat;
     background-size: 120% 100vh;
     font-family:  'Courier New';
@@ -11,10 +11,10 @@
 }
 button {
    background-color: rgb(75, 11, 117); 
-   color: rgb(255, 255, 255);
+   color: rgb(0, 0, 0);
    width: 7vmin;
    justify-self: center;
    margin: 10px;
-   border: 2px solid white;
+   border: 2px solid rgb(0, 0, 0);
 
-} */
+}
