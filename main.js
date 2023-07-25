@@ -79,20 +79,21 @@
 
 const carQuestions = [{
    question: 'What was the first car brand?',
-   answer: 'Peugeot',
+   correctAnswer: 'Peugeot',
    options: ['Peugeot', "General Motors", 'Ford', 'Tesla']
 }]
+
 // let questionsCurrent = carQuestions(question.length - 1)
-const answered = []
+let score = 0
+const answered = 0
 const questions1 = document.querySelector('#questionField')
 console.log(questions1)
-const answerButtons = document.querySelectorAll('button')
+const answerButtons = document.querySelectorAll('Button')
 
 answerButtons.forEach(function (btn) {
    btn.addEventListener('click', checkAnswer)
 })
 function renderQuestion() {
-   console.log(carQuestions[0].question)
    questions1.innerText = carQuestions[0].question
    for (let i = 0; i < answerButtons.length; i++) {
        console.log(carQuestions[0].options[i])
@@ -105,10 +106,40 @@ function renderQuestion() {
 renderQuestion()
 
 function checkAnswer(c) {
-   console.log(c.target)
    let answer = ""
    if (c.target.tagName === 'BUTTON') {
-       answer = carQuestions.options[c.target.id]
-   } else if (c.target.tagName === 'SPAN')
-       answer = c.target.innerText
-      console.log(answer)}
+       answer = c.target.querySelector('span').innerText
+       
+      } else if (c.target.tagName === 'SPAN') {
+      answer = c.target.innerText
+      console.log(answer)
+   }
+      if (c.target.innerText === carQuestions[0].correctAnswer ) {
+      //  score++;
+      //  answered.push(0);
+      console.log('this is true')//next step make correct answer green
+       }
+      }
+      function loadscore(){
+         const CurrentScore = document.getElementbyId('currentScore')
+         currentScore.textContent = score
+      }
+
+
+
+      // question: 'What was the first car brand?'
+      // answers:[
+      //    {text: 'Peugeot', correct: true},
+      //    {text: 'General Motors', correct: false},
+      //    {text: 'Ford', correct: false},
+      //    {text: 'Tesla', correct: false},
+
+
+      
+// function checkAnswer(c) {
+//    let answer = ""
+//    if (c.target.tagName === 'BUTTON') {
+//        answer = carQuestions.options[c.target.id]
+//    } else if (c.target.tagName === 'SPAN')
+//        answer = c.target.innerText
+//       console.log(answer)
