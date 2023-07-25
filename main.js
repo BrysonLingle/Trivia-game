@@ -42,28 +42,73 @@
 
 // // }
 
-const carQuestions = {
-   question: 'What was the first car brand?',
-   answer: 'Peugeot',  
-   options: ['Peugeot', "General Motors", 'Ford', 'Tesla']
-}
-const questions1 = document.querySelector('#questionfield')
-const answerButtons = document.querySelectorAll('button-wrapper')
+// const carQuestions = [{
+//    question: 'What was the first car brand?',
+//    answer: 'Peugeot',  
+//    options: ['Peugeot', "General Motors", 'Ford', 'Tesla']
+// }]
+//    let questionsCurrent = carQuestions[carQuestions.length-1]
+//    const answered= []
+// const questions1 = document.querySelector('#questionField')
+// const answerButtons = document.querySelectorAll('#button-wrapper')
 
-answerButtons.forEach(function(btn){
+// answerButtons.forEach(function(btn){
+//    btn.addEventListener('click', checkAnswer)
+// })
+// function renderQuestion(){
+//    questions1.innerText = carQuestions[0].question
+//    for (let i = 0; i < answerButtons.length; i++){
+//       let buttonsNow = answerButtons[i]
+//       buttonsNow.querySelector('span').innerText=carQuestions
+//    }
+
+// }
+//    renderQuestion()
+//    function chechAnswer(c){
+//       console.log(c.target)
+//       let answer = ""
+//       if(c.target.tagName === 'button'){
+//          answer = carQuestions.options[c.target.id]
+//       }else if (c.target.tagName === 'span')  
+//       answer=c.target.innerText
+//    }
+
+// console.log(answer)
+
+
+
+const carQuestions = [{
+   question: 'What was the first car brand?',
+   answer: 'Peugeot',
+   options: ['Peugeot', "General Motors", 'Ford', 'Tesla']
+}]
+// let questionsCurrent = carQuestions(question.length - 1)
+const answered = []
+const questions1 = document.querySelector('#questionField')
+console.log(questions1)
+const answerButtons = document.querySelectorAll('button')
+
+answerButtons.forEach(function (btn) {
    btn.addEventListener('click', checkAnswer)
 })
-function renderQuestion(){
-   questions1.innerText = carQuestions.question
-   for (let i = 0; i < answerButtons.length; i++){
-      let buttonsNow = answerButtons[i]
-      buttonsNow.querySelector('span').innerText=carQuestions
+function renderQuestion() {
+   console.log(carQuestions[0].question)
+   questions1.innerText = carQuestions[0].question
+   for (let i = 0; i < answerButtons.length; i++) {
+       console.log(carQuestions[0].options[i])
+       let buttonsNow = answerButtons[i]
+       buttonsNow.querySelector('span').innerText = carQuestions[0].options[i]
    }
 
 }
-   renderQuestion()
-   function chechAnswer(c){
-      console.log(c.target)
-   }
 
-console.log(answer)
+renderQuestion()
+
+function checkAnswer(c) {
+   console.log(c.target)
+   let answer = ""
+   if (c.target.tagName === 'BUTTON') {
+       answer = carQuestions.options[c.target.id]
+   } else if (c.target.tagName === 'SPAN')
+       answer = c.target.innerText
+      console.log(answer)}
