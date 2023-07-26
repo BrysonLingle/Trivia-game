@@ -4,17 +4,43 @@
     /* background-image: url('https://images.pexels.com/photos/8141163/pexels-photo-8141163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
     background-repeat: no-repeat;
     background-size: 120% 100vh;
-    font-family:  'Courier New';
+    font-family: 'Courier New';
     font-weight: lighter;
     font-size: 24px;
     letter-spacing: 1px;
-}
-button {
-   background-color: rgb(75, 11, 117); 
-   color: rgb(0, 0, 0);
-   width: 7vmin;
-   justify-self: center;
-   margin: 10px;
-   border: 2px solid rgb(0, 0, 0);
+ }
 
-}
+ button {
+    background-color: rgb(75, 11, 117);
+    color: rgb(255, 255, 255);
+    width: 7vmin;
+    justify-self: center;
+    margin: 10px;
+    border: 2px solid rgb(0, 0, 0);
+
+ }
+
+ p {
+    color: rgb(0, 183, 255);
+    border: 2px solid white;
+    font-weight: heavy;
+ }
+
+ #nextButton {
+    display: flex;
+    justify-content: right;
+    margin-right: 30%;
+ }
+
+ #nextButton button {
+    background-color: aqua;
+    color: black;
+ }
+
+ .wrong-answer {
+    background-color: red;
+ }
+
+ .correct-answer {
+    background-color: green;
+ }

@@ -1,22 +1,32 @@
 <!DOCTYPE html>
+<html>
+
 <head>
-    <div class = 'page'>
-<h1> Vehicle Quiz</h1>
-<div id="carQuiz"></div>
-<div id ='results'></div>
-<link href="style.css" rel="stylesheet">
-<script defer src="main.js"> </script>
-</div> 
- </head>
- <body>
-    <h2> Question1: <span id= 'questionField'></span></h2>
-    <div class = 'button-wrapper'>
-    <button id= "1"> answer 1 -<span id = 'answer1Text'></span></button>
-    <button id= "2"> answer 2 -<span id = 'answer2Text'></span></button>
-    <button id= "3"> answer 3 -<span id = 'answer3Text'></span></button>
-    <button id= "4"> answer 4 -<span id = 'answer4Text'></span></button>
-    <p id="score">Your Score: <span id="currentScore">0</span> out of 1</p>
-    </body>
+    <title>Vehicle Quiz</title>
+    <link href="style.css" rel="stylesheet">
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    <div class='page'>
+        <h1>Vehicle Quiz</h1>
+        <div id="carQuiz"></div>
+        <div id='results'></div>
+    </div>
+
+    <h2>Question1: <span id='questionField'></span></h2>
+    <div class='button-wrapper'>
+
+        <button class="question-buttons" id="option1"> <span id='answer1Text'></span> </button> <!-- ADDED class-->
+        <button class="question-buttons" id="option2"> <span id='answer2Text'></span></button> <!-- ADDED class-->
+        <button class="question-buttons" id="option3"> <span id='answer3Text'></span></button> <!-- ADDED class-->
+        <button class="question-buttons" id="option4"> <span id='answer4Text'></span></button> <!-- ADDED class-->
+    </div>
+    <div id='nextButton'> <button>Next Question</button></div>
+    <p id="score">Your Score: <span id="currentScore">0</span> out of 6</p>
+</body>
+
+</html>
 <!-- </body>
 <body>
     <h2> What is the most popular car in the world? </h2>
