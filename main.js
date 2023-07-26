@@ -14,11 +14,28 @@ let carQuestions = [
    options: ['Ford Fiesta', 'Chevy Malibu', 'Toyota Corrola', 'Hyndai Elantra']
   },
   {
-   question: 'Who founded the Ford Motor Company?',
-   correctAnswer: 'Henry Ford',
-   options: ['Henry Ford', 'Elon Musk', 'Thomas Edison', 'Alexander Graham Bell']
+   question: 'Where was the worlds first paved road specifically for cars?',
+   correctAnswer: 'Queens New York',
+   options: ['Milan Italy', 'Queens New York', 'Vienna Austria', 'San Francisco']
+  },
+  {
+   question: 'Which country consumes the most gas every year?',
+   correctAnswer: 'United States',
+   options: ['Mexico', 'Russia', 'China', 'United States']
+  },
+  {
+   question: 'What is the most common car color?',
+   correctAnswer: 'White',
+   options: ['Red', 'Gray', 'Black', 'White']
+  },
+  {
+   question: 'What brand of car does James Bond drive',
+   correctAnswer: 'Aston Martin',
+   options:['Ferrari', 'Aston Martin', 'Porche', 'Rolls']
   }
- ];
+
+
+];
 
 const option1 = document.getElementById('option1');
 
@@ -32,7 +49,6 @@ answerButtons.forEach(function (btn) {
    checkAnswer(event);
   });
 });
-
 function renderQuestion() {
   questions1.innerText = carQuestions[round].question; //REPLACED the 0 with round so as the rounds increase, it moves through the carQuestions array
   for (let i = 0; i < answerButtons.length; i++) {
@@ -45,6 +61,15 @@ const nextButton = document.querySelector('#nextButton')
 
 nextButton.addEventListener('click', function(){
   round++ //ADDED an increase to the round variable to the above renderQuestion function moves on to the next question in carQuestions
+ if (round < carQuestions.length) {
+   renderQuestion
+ } else{
+   document.getElementById('nextButton').style.display = 'none'
+   var fullReset = document.getElementById('fullReset')
+ }
+
+
+
   renderQuestion()
 })
 
@@ -60,7 +85,7 @@ function checkAnswer(event) {
     console.log(answer);
   }
 
-  if (answer === carQuestions[0].correctAnswer) {
+  if (answer === carQuestions[round].correctAnswer) {
     score++;
     console.log('Correct Answer!');
    // event.target.classlist.add('correct-answer')
@@ -70,8 +95,10 @@ function checkAnswer(event) {
    // event.target.classlist.add('wrong-answer')
   }
 
-  function loadscore() {
-   const currentScoreEl = document.getElementById('currentScore');
-   currentScoreEl.textContent = score;
-  }
+
+
+}
+function loadscore() {
+ const currentScoreEl = document.getElementById('currentScore');
+ currentScoreEl.textContent = score;
 }
