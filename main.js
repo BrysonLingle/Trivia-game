@@ -66,6 +66,9 @@ nextButton.addEventListener('click', function(){
  } else{
    document.getElementById('nextButton').style.display = 'none'
    var fullReset = document.getElementById('fullReset')
+   fullReset.addEventListener('click', function(e){
+      location.reload()
+   }, false)
  }
 
 
