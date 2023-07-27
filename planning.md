@@ -1,3 +1,13 @@
-## pseudo code
-hmtl Title
-need to make question and answer functions
+# Trivia-game
+## Technolgy Used
+HTML
+Javascript
+CSS
+<img src ='![Alt text](<Screenshot (1)-1.png>)'>
+## pseudo-code
+// Start with hmtl layout
+Creat questions answers and options
+Apply the questions with js
+work in the buttons for the options
+make the score that increases as the players score increases
+Put in next question button to 

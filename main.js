@@ -97,9 +97,11 @@ function checkAnswer(event) {
    console.log('Wrong Answer')
    // event.target.classlist.add('wrong-answer')
   }
-
-
-
+  // answer.parentElement.classList.add(checkAnswer)
+  // answer.parentElement.classList.remove(checkAnswer)
+setTimeout(()=>{
+nextButton.click()
+},500)
 }
 function loadscore() {
  const currentScoreEl = document.getElementById('currentScore');
