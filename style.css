@@ -1,6 +1,6 @@
  body {
     text-align: center;
-    color: rgb(21, 255, 0);
+    color: rgb(76, 0, 255);
     background-image: url('https://images.pexels.com/photos/8141163/pexels-photo-8141163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
     background-repeat: no-repeat;
     background-size: 120% 100vh;
@@ -50,4 +50,25 @@
     display: flex;
     justify-content: right;
     margin: -7.35% 75%;
+ }
+
+ .one {
+    grid-column: 1/3;
+    grid-row: 2/4;
+    background-color: grey;
+ }
+
+ .container {
+    background-color: grey;
+    border: grey;
+ }
+ p {
+   background-color: white;
+ }
+ h1 {
+   background-color: black;
+   color: white;
+ }
+ #score {
+   color: Black;
  }
