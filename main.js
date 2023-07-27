@@ -1,4 +1,4 @@
-let round = 0; //ADDED rounds to track which question you are on
+let round = 0;
 const currentScore = document.getElementById("currentScore");
 console.log(currentScore);
 let questionText = document.querySelector("h2");
@@ -90,17 +90,14 @@ let carQuestions = [
       "Small Universal Vehicle",
     ],
   },
-  // {
-  //   question: "Congrats! How did you do?",
-  //   options: ['', '', '', '']
-  // }
+
 ];
 const option1 = document.getElementById("option1");
 
 let score = 0;
 const questions1 = document.querySelector("#questionField");
 console.log(questions1);
-const answerButtons = document.querySelectorAll(".question-buttons"); //ADDED classes to the question buttons and specified you only wanted .question-buttons so you don't add the Next Question button to the array as well
+const answerButtons = document.querySelectorAll(".question-buttons");
 
 answerButtons.forEach(function (btn) {
   btn.addEventListener("click", function (event) {
@@ -109,11 +106,11 @@ answerButtons.forEach(function (btn) {
 });
 function renderQuestion() {
   if (round < carQuestions.length) {
-    questions1.innerText = carQuestions[round].question; //REPLACED the 0 with round so as the rounds increase, it moves through the carQuestions array
+    questions1.innerText = carQuestions[round].question;
     for (let i = 0; i < answerButtons.length; i++) {
       let buttonsNow = answerButtons[i];
       buttonsNow.querySelector("span").innerText =
-        carQuestions[round].options[i]; //REPLACED the 0 with round so as the rounds increase, it moves through the carQuestions array
+        carQuestions[round].options[i];
     }
     console.log(questions1);
   } else {
@@ -158,14 +155,13 @@ function checkAnswer(event) {
   if (answer === carQuestions[round].correctAnswer) {
     score++;
     console.log("Correct Answer!");
-    // event.target.classlist.add('correct-answer')
+
     loadscore();
   } else {
     console.log("Wrong Answer");
-    // event.target.classlist.add('wrong-answer')
+
   }
-  // answer.parentElement.classList.add(checkAnswer)
-  // answer.parentElement.classList.remove(checkAnswer)
+
   setTimeout(() => {
     nextButton.click();
   }, 500);

@@ -10,4 +10,4 @@ Creat questions answers and options
 Apply the questions with js
 work in the buttons for the options
 make the score that increases as the players score increases
-Put in next question button to 
+Make it so that the game changes questions after player chooses an answer
