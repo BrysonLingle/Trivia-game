@@ -1,7 +1,7 @@
 let round = 0; //ADDED rounds to track which question you are on
-
 const currentScore = document.getElementById("currentScore");
 console.log(currentScore);
+let questionText = document.querySelector("h2");
 let carQuestions = [
   {
     question: "What was the first car brand?",
@@ -90,6 +90,10 @@ let carQuestions = [
       "Small Universal Vehicle",
     ],
   },
+  // {
+  //   question: "Congrats! How did you do?",
+  //   options: ['', '', '', '']
+  // }
 ];
 const option1 = document.getElementById("option1");
 
@@ -104,10 +108,16 @@ answerButtons.forEach(function (btn) {
   });
 });
 function renderQuestion() {
-  questions1.innerText = carQuestions[round].question; //REPLACED the 0 with round so as the rounds increase, it moves through the carQuestions array
-  for (let i = 0; i < answerButtons.length; i++) {
-    let buttonsNow = answerButtons[i];
-    buttonsNow.querySelector("span").innerText = carQuestions[round].options[i]; //REPLACED the 0 with round so as the rounds increase, it moves through the carQuestions array
+  if (round < carQuestions.length) {
+    questions1.innerText = carQuestions[round].question; //REPLACED the 0 with round so as the rounds increase, it moves through the carQuestions array
+    for (let i = 0; i < answerButtons.length; i++) {
+      let buttonsNow = answerButtons[i];
+      buttonsNow.querySelector("span").innerText =
+        carQuestions[round].options[i]; //REPLACED the 0 with round so as the rounds increase, it moves through the carQuestions array
+    }
+    console.log(questions1);
+  } else {
+    questionText.innerHTML = "Congrats!";
   }
 }
 
@@ -119,7 +129,8 @@ nextButton.addEventListener("click", function () {
   if (round < carQuestions.length) {
     renderQuestion;
   } else {
-    document.getElementById("nextButton").style.display = "none";
+    console.log("made it");
+    questionText.InnerHTML = "Congrats!";
     var fullReset = document.getElementById("fullReset");
     fullReset.addEventListener(
       "click",
