@@ -1,6 +1,6 @@
 let round = 0;
 const currentScore = document.getElementById("currentScore");
-console.log(currentScore);
+
 let questionText = document.querySelector("h2");
 let carQuestions = [
   {
@@ -90,13 +90,12 @@ let carQuestions = [
       "Small Universal Vehicle",
     ],
   },
-
 ];
 const option1 = document.getElementById("option1");
 
 let score = 0;
 const questions1 = document.querySelector("#questionField");
-console.log(questions1);
+
 const answerButtons = document.querySelectorAll(".question-buttons");
 
 answerButtons.forEach(function (btn) {
@@ -112,7 +111,7 @@ function renderQuestion() {
       buttonsNow.querySelector("span").innerText =
         carQuestions[round].options[i];
     }
-    console.log(questions1);
+
   } else {
     questionText.innerHTML = "Congrats!";
   }
@@ -126,7 +125,7 @@ nextButton.addEventListener("click", function () {
   if (round < carQuestions.length) {
     renderQuestion;
   } else {
-    console.log("made it");
+
     questionText.InnerHTML = "Congrats!";
     var fullReset = document.getElementById("fullReset");
     fullReset.addEventListener(
@@ -149,16 +148,15 @@ function checkAnswer(event) {
     answer = event.target.querySelector("span").innerText;
   } else {
     answer = event.target.innerText;
-    console.log(answer);
+
   }
 
   if (answer === carQuestions[round].correctAnswer) {
     score++;
-    console.log("Correct Answer!");
+
 
     loadscore();
   } else {
-    console.log("Wrong Answer");
 
   }
 
