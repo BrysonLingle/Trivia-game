@@ -15,3 +15,9 @@ This is a trivia game to test the players knowledge on some car facts. After get
 
 ## link 
 https://brysonlingle.github.io/Trivia-game/
+
+## Sources
+https://www.w3schools.com/
+https://stackoverflow.com/
+
+I also watched way to many youtube videos on different types and ways to build a quiz using JavaScript.
