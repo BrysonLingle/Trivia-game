@@ -1,6 +1,6 @@
 ##  Car Trivia Game
 This is a trivia game to test the players knowledge on some car facts. After getting the right answer the score will inrease by one.
-## Technolies used 
+## Technologies used 
 ## JavaSCript 
 - Is all the mechanics that make the game run that the player usually usually doesnt see.
 ## HTML
